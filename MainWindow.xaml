@@ -1,0 +1,181 @@
+﻿Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.    
+
+<Window x:Class="JuegoLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuegoLauncher"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ContentRendered="Window_ContentRendered"
+        Title="Wizard101 ESP (Launcher)" MinHeight="622" MinWidth="1106" MaxHeight="622" MaxWidth="1106">
+    <Grid>
+        <Image Stretch="UniformToFill" Source="/imagenes/image.jpg" HorizontalAlignment="Center" Margin="0,0,0,-3" Width="1106"/>
+        <TextBlock Name="VersionText" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="18" Foreground="#FF716D6D" Margin="0, 0, 5, 0" FontFamily="Comic Sans MS"/>
+        <Button Name="JugarBotón" Content="Comprobando actualizaciones" Click="JugarBotón_Click" Height="70" FontSize="28" Margin="0,450,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" MinWidth="150" Width="436" BorderThickness="0,0,0,0" FontFamily="Comic Sans MS" FontWeight="Bold" UseLayoutRounding="False" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect x:Name="Sombreado" RenderingBias="Quality" ShadowDepth="50" BlurRadius="50" Opacity="1" Direction="315"/>
+            </Button.Effect>
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/imagenes/setbackgroundplain.jpg"/>
+            </Button.OpacityMask>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/imagenes/setbackgroundplain.jpg" Stretch="Fill" TileMode="Tile"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Click="ImageButton_Click" BorderThickness="0" Background="Transparent" Cursor="Hand" RenderTransformOrigin="0.296,0.481" Margin="-2,0,0,-2" HorizontalAlignment="Left" Width="43" Height="44" VerticalAlignment="Bottom">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.281"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.156"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Image Source="/vecteezy_discord-logo-png-discord-icon-transparent-png_18930718.png" Width="58" Height="48" RenderTransformOrigin="-0.018,0.437" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Image Source="/wizardborder.GIF" Margin="765,10,10,393" Stretch="Fill" >
+        </Image>
+        <Button Click="ImageButton_Click2" BorderThickness="0" Background="Transparent" Cursor="Hand" Margin="793,26,38,407">
+            <Image Source="/ghastlyraid.jpg" Width="272" Height="170"/>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Name="UpdateText" Content="Actualización: Ghastly Conspiracy Raid" FontSize="13" Margin="782,0,29,349" MinWidth="150" BorderThickness="0,0,0,0" FontFamily="Comic Sans MS" FontWeight="Bold" UseLayoutRounding="False" Foreground="#FFDEC356" Cursor="" Height="39" VerticalAlignment="Bottom">
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="/imagenes/setbackgroundplain.jpg"/>
+            </Button.OpacityMask>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/setbackground3.gif" Stretch="Fill" TileMode="Tile"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Image Source="/Wizard101-Logo.png" Margin="6,4,879,467" RenderTransformOrigin="0.43,0.427">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="5" ShadowDepth="10" Direction="279.7" RenderingBias="Quality"/>
+            </Image.Effect>
+        </Image>
+        <Image Source="/Button_Spiral.png" Margin="5,0,0,43" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="34"/>
+        <Button Click="ImageButton_Click3" BorderThickness="0" Background="Transparent" Cursor="Hand" Margin="6,0,0,43" HorizontalAlignment="Left" Width="33" Height="34" VerticalAlignment="Bottom">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Black"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

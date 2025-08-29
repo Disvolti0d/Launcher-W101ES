@@ -1,1 +1,1 @@
-Launcher creado para actualización automática del parche al español del servidor americano de Wizard101
+Launcher creado para actualización automática del parche al español del servidor americano de Wizard101.
