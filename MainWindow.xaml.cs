@@ -128,7 +128,7 @@ namespace JuegoLauncher
                 try
                 {
                     WebClient webClient = new WebClient();
-                    Version onlineVersion = new Version(webClient.DownloadString("https://drive.google.com/uc?export=download&id=1YwVAXqgBolw-08Hd30U-X7fBnkawjQbf"));
+                    Version onlineVersion = new Version(webClient.DownloadString("Drive_DWNLD_LINK"));
 
                     if (onlineVersion.IsDifferentThan(localVersion))
                     {
@@ -163,11 +163,11 @@ namespace JuegoLauncher
                 else
                 {
                     Status = LauncherStatus.downloadingGame;
-                    _onlineVersion = new Version(webClient.DownloadString("https://drive.google.com/uc?export=download&id=1YwVAXqgBolw-08Hd30U-X7fBnkawjQbf"));
+                    _onlineVersion = new Version(webClient.DownloadString("Drive_DWNLD_LINK"));
                 }
 
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
-                webClient.DownloadFileAsync(new Uri("https://drive.google.com/uc?export=download&id=1Yy-w0hHzASZghMqckNy9UJmyjDnp2ZWN"), gameZip, _onlineVersion);
+                webClient.DownloadFileAsync(new Uri("Drive_DWNLD_LINK"), gameZip, _onlineVersion);
             }
             catch (Exception ex)
             {
@@ -288,4 +288,5 @@ namespace JuegoLauncher
             return $"{major}.{minor}.{subMinor}";
         }
     }
+
 }
