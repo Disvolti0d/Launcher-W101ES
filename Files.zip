@@ -1,2 +1,4 @@
 Locale_English-Root.wad
-Runtime 2.bat (cd C:\ProgramData\KingsIsle Entertainment\Wizard101\ start Wizard101.exe exit)
+Locale_English-Sound_Dialogue.wad
+Runtime 2.bat
+config.txt
