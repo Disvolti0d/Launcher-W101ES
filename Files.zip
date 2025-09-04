@@ -1,4 +1,4 @@
 Locale_English-Root.wad
-Locale_English-Sound_Dialogue.wad
-Runtime 2.bat
-config.txt
+Runtime 2.bat (.bat para ejecutar el juego al darle a Jugar, se puede encontrar en la carpeta seleccionada del juego)
+config.txt (configuración del launcher)
+
