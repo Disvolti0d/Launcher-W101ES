@@ -1,4 +1,5 @@
 Locale_English-Root.wad
 Runtime 2.bat (.bat para ejecutar el juego al darle a Jugar, se puede encontrar en la carpeta seleccionada del juego)
 config.txt (configuración del launcher)
+version.txt (comprobador de version)
 
